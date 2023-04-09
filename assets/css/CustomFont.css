@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Estedad;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/fonts/Estedad-Black.ttf") format("ttf"),
+      url("../fonts/fonts/Estedad-Bold.ttf") format("ttf"),
+     url("../fonts/fonts/Estedad-ExtraBold.ttf") format("ttf"),
+      url("../fonts/fonts/Estedad-ExtraLight.ttf") format("ttf"),
+      url("../fonts/fonts/Estedad-Light.ttf") format("ttf"),
+       url("../fonts/fonts/Estedad-Medium.ttf") format("ttf"),
+      url("../fonts/fonts/Estedad-Regular.ttf") format("ttf"),
+      url("../fonts/fonts/Estedad-SemiBold.ttf") format("ttf"),
+      url("../fonts/fonts/Estedad-Thin.ttf") format("ttf");
+
+ 
+      
+  }
+  html *
+  {
+     font-size: 1em ;
+    
+     font-family: Estedad !important;
+  }
+  .checked {
+    color: orange;
+  }
+
+  
