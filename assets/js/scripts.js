@@ -160,23 +160,34 @@ $(function () {
     if (w.outerWidth() <= 1024) {
       body.removeClass("search-show search-gone");
       if (body.hasClass("sidebar-gone")) {
-        body.removeClass("sidebar-gone");
-        body.addClass("sidebar-show");
+     body.removeClass("sidebar-gone");
+     body.addClass("sidebar-show");
       } else {
-        body.addClass("sidebar-gone");
-        body.removeClass("sidebar-show");
+         body.addClass("sidebar-gone");
+      
+         body.removeClass("sidebar-show");
       }
 
       update_sidebar_nicescroll();
     } else {
-      body.removeClass("search-show search-gone");
+     
+     // body.removeClass("main-sidebar");
+    // body.removeClass("sidebar-show");
+     
+
       if (body.hasClass("sidebar-mini")) {
-        toggle_sidebar_mini(false);
+        body.removeClass("sidebar");
+       toggle_sidebar_mini(false);
+      
+
       } else {
-        toggle_sidebar_mini(true);
+       
+        
+       toggle_sidebar_mini(true);
+
       }
     }
-
+    
     return false;
   });
 
@@ -193,26 +204,41 @@ $(function () {
         }
       });
     }
+    // if (w.outerWidth() >= 1024) 
+    // {
+    //   alert("dfdfdfdf")
+    //   $("body").removeClass("sidebar-show");
+    //   $("body").addClass("sidebar-gone");
+    //   $("body").removeClass("search-show");
+ 
+    // }
+   
+    if (w.outerWidth() <= 1024) 
+    {
 
-    if (w.outerWidth() <= 1024) {
-      if ($("body").hasClass("sidebar-mini")) {
-        toggle_sidebar_mini(false);
-        $(".main-sidebar").niceScroll(sidebar_nicescroll_opts);
+      if ($("body").hasClass("sidebar-mini")) 
+
+      {
+      toggle_sidebar_mini(false);
+      
+    $(".main-sidebar").niceScroll(sidebar_nicescroll_opts);
         sidebar_nicescroll = $(".main-sidebar").getNiceScroll();
       }
 
-      $("body").addClass("sidebar-gone");
-      $("body").removeClass("layout-2 layout-3 sidebar-mini sidebar-show");
+     $("body").addClass("sidebar-gone");
+     
+      
+     //  $("body").removeClass("layout-2 layout-3 sidebar-mini sidebar-show");
+    
       $("body")
         .off("click")
         .on("click", function (e) {
-          if (
-            $(e.target).hasClass("sidebar-show") ||
-            $(e.target).hasClass("search-show")
-          ) {
-            $("body").removeClass("sidebar-show");
+          if ( $(e.target).hasClass("sidebar-show") || $(e.target).hasClass("search-show") ) {
+           
+             $("body").removeClass("sidebar-show");
             $("body").addClass("sidebar-gone");
-            $("body").removeClass("search-show");
+         
+ 
 
             update_sidebar_nicescroll();
           }
@@ -256,17 +282,27 @@ $(function () {
         sidebar_dropdown();
         $(".main-wrapper").removeClass("container");
       }
-    } else {
+    }
+     else {
+     
+ 
       $("body").removeClass("sidebar-gone sidebar-show");
+      
       if (now_layout_class) $("body").addClass(now_layout_class);
 
       let nav_second_classes = $(".main-sidebar").attr("data-nav-classes"),
         nav_second = $(".main-sidebar");
 
+ 
+
       if (
         now_layout_class == "layout-3" &&
         nav_second.hasClass("main-sidebar")
-      ) {
+
+
+      ) 
+      {
+        
         nav_second.find(".sidebar-menu li a.has-dropdown").off("click");
         nav_second.find(".sidebar-brand").remove();
         nav_second.removeAttr("class");
@@ -285,16 +321,28 @@ $(function () {
         main_sidebar.removeAttr("style");
         main_sidebar.removeAttr("tabindex");
         main_sidebar.removeAttr("data-nav-classes");
+       // main_sidebar.hide();
         $(".main-wrapper").addClass("container");
-        // if(sidebar_nicescroll != null)
+        //  if(sidebar_nicescroll != null)
         //   sidebar_nicescroll.remove();
       } else if (now_layout_class == "layout-2") {
         $("body").addClass("layout-2");
+  
       } else {
         update_sidebar_nicescroll();
       }
     }
   };
+  
+ 
+//   $( document ).ready(function() {
+//           $("body").removeClass("sidebar-show");
+//       $("body").addClass("sidebar-gone");
+//       $("body").addClass("search-show");
+
+//       //search-show
+// })
+ 
   toggleLayout();
   $(window).resize(toggleLayout);
 
