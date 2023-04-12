@@ -163,9 +163,9 @@ $(function () {
      body.removeClass("sidebar-gone");
      body.addClass("sidebar-show");
       } else {
-         body.addClass("sidebar-gone");
+       //  body.addClass("sidebar-gone");
       
-         body.removeClass("sidebar-show");
+      //   body.removeClass("sidebar-show");
       }
 
       update_sidebar_nicescroll();
