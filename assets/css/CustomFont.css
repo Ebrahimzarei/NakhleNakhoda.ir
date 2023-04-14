@@ -49,10 +49,11 @@
   margin: 50px;
   max-width: 300px;
   margin-right: 300px;
- 
+ opacity: 9;
   padding: 16px;
-  background-color: white;
-  opacity: 800px;
+   
+  background-color: rgb(214, 203, 203); background-image: none;
+   
 }
 
 /* Full-width input fields */
