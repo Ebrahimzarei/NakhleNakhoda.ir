@@ -162,27 +162,57 @@ $(function () {
       if (body.hasClass("sidebar-gone")) {
      body.removeClass("sidebar-gone");
      body.addClass("sidebar-show");
+     //alert('baze');
+     var x = document.getElementById("contactme");
+     if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    } 
       } else {
-       //  body.addClass("sidebar-gone");
-      
-      //   body.removeClass("sidebar-show");
+        var x = document.getElementById("contactme");
+        if (x.style.display === "block") {
+         x.style.display = "none";
+       } else {
+         x.style.display = "block";
+       }
       }
 
       update_sidebar_nicescroll();
     } else {
      
-     // body.removeClass("main-sidebar");
-    // body.removeClass("sidebar-show");
+ 
      
 
       if (body.hasClass("sidebar-mini")) {
         body.removeClass("sidebar");
        toggle_sidebar_mini(false);
-      
-
-      } else {
        
-        
+      //alert("baze");
+      var x = document.getElementById("contactme");
+      if (x.style.display === "block") {
+       x.style.display = "none";
+     } else {
+       x.style.display = "block";
+     }
+      } else {
+     // alert("baste");logonavbar
+      // var x = document.getElementById("contactme");
+      // var image = document.getElementById("logonavbar");
+      // image.style.display =="block";
+
+      if (x.style.display === "block") {
+       x.style.display = "none";
+     } else {
+       x.style.display = "block";
+     } 
+
+    //     var x = document.getElementById("contactme");
+    //  if (x.style.display === "none") {
+    //   x.style.display = "block";
+    // } else {
+    //   x.style.display = "none";
+    // }
        toggle_sidebar_mini(true);
 
       }
