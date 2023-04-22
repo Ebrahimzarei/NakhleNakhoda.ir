@@ -255,7 +255,7 @@ $(function () {
         sidebar_nicescroll = $(".main-sidebar").getNiceScroll();
       }
 
-     $("body").addClass("sidebar-gone");
+     //$("body").addClass("sidebar-gone");
      
       
      //  $("body").removeClass("layout-2 layout-3 sidebar-mini sidebar-show");
@@ -769,6 +769,7 @@ $(function () {
     $("#sticky_header_setting").prop("checked", true);
     toggle_sticky_header(true);
   });
+  
 
   //start up class add
 
